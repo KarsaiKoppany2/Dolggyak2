@@ -39,5 +39,13 @@ namespace Dolggyak2
             TavolsagKm = tavolsagKm;
             osszesCsomagSzam++;
         }
+        public int KiszallitasiDij() 
+        {
+            return 500 + (tavolsagKm * 100) + (sulyKg * 200);
+        }
+        public override string ToString() 
+        {
+            return $"{CsomagKod} Címzett: {Cimzett} | Súly: {SulyKg} kg | Távolság: {TavolsagKm} km | Díj: {KiszallitasiDij()} Ft";
+        }
     }
 }
