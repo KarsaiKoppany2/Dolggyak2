@@ -30,5 +30,14 @@ namespace Dolggyak2
             }
         }
         public static int OsszesCsomagSzam { get { return osszesCsomagSzam; } }
+        public Csomag(string csomagKod, string cimzett, int sulyKg) :this(csomagKod, cimzett, sulyKg, 10) { }
+        public Csomag(string csomagKod, string cimzett,int sulyKg, int tavolsagKm) 
+        {
+            CsomagKod = csomagKod;
+            Cimzett = cimzett;
+            SulyKg = sulyKg;
+            TavolsagKm = tavolsagKm;
+            osszesCsomagSzam++;
+        }
     }
 }
